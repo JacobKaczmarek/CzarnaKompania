@@ -29,6 +29,8 @@
   @media (min-width: 768px) {
     position: relative;
     top: 30%;
+    width: 70%;
+    margin: auto;
   }
 }
 

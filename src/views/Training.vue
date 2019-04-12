@@ -35,12 +35,18 @@ export default {
 header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 3px solid black;
 
   a {
     text-decoration: none;
     font-size: 2em;
     font-weight: bold;
     color: inherit;
+  }
+
+  @media (min-width: 765px) {
+    width: 60%;
+    margin: auto;
   }
 }
 
@@ -53,16 +59,14 @@ header {
 
   @media (min-width: 768px) {
     margin: 30px;
-
+    text-align: center;
     img {
-      width: 60%;
-      height: auto;
-    }
-
-    .innerWrapper {
-      display: flex;
-      justify-content: space-evenly;
+      width: 50%;
     }
   }
+}
+
+.innerWrapper {
+  margin-top: 40px;
 }
 </style>

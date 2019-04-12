@@ -2,10 +2,6 @@
   <div class="timerWrapper">
     <h2>Timer</h2>
     <div class="innerWrapper">
-      Time:
-      <input type="number" v-model="startTime" placeholder="Time in seconds">
-      <button @click="startTimer()" class="startButton">Start</button>
-      <p v-if="started" class="counter">{{ timeLeft.toFixed(2) }}s</p>
       <div class="progress-bar-outline">
         <div class="progress-bar-fill"></div>
       </div>
@@ -22,7 +18,7 @@ export default {
   data() {
     return {
       started: false,
-      startTime: null,
+      startTime: 20,
       timeLeft: null
     };
   },
@@ -34,16 +30,16 @@ export default {
       let interval = setInterval(() => {
         this.timeLeft -= 0.01;
         progress = ((this.startTime - this.timeLeft) / this.startTime) * 100;
-        console.log(progress);
         $(".progress-bar-fill").css("width", progress + "%");
         if (this.timeLeft <= 0) {
           clearInterval(interval);
           this.timeLeft = 0;
-          let horn = new Audio(require("../assets/horn.mp3"));
-          horn.play();
         }
       }, 10);
     }
+  },
+  mounted: function() {
+    this.startTimer();
   }
 };
 </script>
