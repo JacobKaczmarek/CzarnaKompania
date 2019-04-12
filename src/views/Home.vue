@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import Navbar from "@/components/Navbar";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    HelloWorld,
-  },
+    Navbar
+  }
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  background: #333;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url("../assets/background.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+</style>
+

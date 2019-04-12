@@ -18,6 +18,7 @@ import { stat } from "fs";
 import { setInterval, clearInterval } from "timers";
 
 export default {
+  name: "Timer",
   data() {
     return {
       started: false,
@@ -38,6 +39,8 @@ export default {
         if (this.timeLeft <= 0) {
           clearInterval(interval);
           this.timeLeft = 0;
+          let horn = new Audio(require("../assets/horn.mp3"));
+          horn.play();
         }
       }, 10);
     }

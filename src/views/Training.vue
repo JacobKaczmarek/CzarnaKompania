@@ -1,7 +1,9 @@
 <template>
   <div class="trainingWrapper">
-    <h1>Training</h1>
-    <h3>Drill for today</h3>
+    <header>
+      <h1>Drill na dzis</h1>
+      <router-link to="/">CK</router-link>
+    </header>
     <div class="innerWrapper">
       <img :src="drillPath" alt="drill">
       <Timer/>
@@ -30,6 +32,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    color: inherit;
+  }
+}
+
 .trainingWrapper {
   margin: 10px;
 
@@ -52,4 +66,3 @@ export default {
   }
 }
 </style>
-
