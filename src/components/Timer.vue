@@ -1,6 +1,5 @@
 <template>
   <div class="timerWrapper">
-    <h2>Timer</h2>
     <div class="innerWrapper">
       <div class="progress-bar-outline">
         <div class="progress-bar-fill"></div>
@@ -32,8 +31,8 @@ export default {
         progress = ((this.startTime - this.timeLeft) / this.startTime) * 100;
         $(".progress-bar-fill").css("width", progress + "%");
         if (this.timeLeft <= 0) {
-          clearInterval(interval);
-          this.timeLeft = 0;
+          this.timeLeft = this.startTime;
+          this.$emit("stop");
         }
       }, 10);
     }
