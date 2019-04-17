@@ -1,7 +1,9 @@
 <template>
   <div class="timerWrapper">
-    <div @click="paused = !paused" class="progress-bar-outline">
-      <div class="progress-bar-fill"></div>
+    <div class="innerWrapper">
+      <div @click="paused = !paused" class="progress-bar-outline">
+        <div class="progress-bar-fill"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -9,8 +11,6 @@
 <script>
 import { stat } from "fs";
 import { setInterval, clearInterval } from "timers";
-
-let interval;
 
 export default {
   name: "Timer",
@@ -27,27 +27,23 @@ export default {
       this.started = true;
       this.timeLeft = this.startTime;
       let progress = 0;
-      interval = setInterval(() => {
+      let interval = setInterval(() => {
         if (!this.paused) {
           this.timeLeft -= 0.01;
           progress = ((this.startTime - this.timeLeft) / this.startTime) * 100;
           $(".progress-bar-fill").css("width", progress + "%");
           if (this.timeLeft <= 0) {
-            this.timeLeft = this.startTime;
-            this.$emit("stop");
+            clearInterval(interval);
+            this.timeLeft = 0;
           }
         }
       }, 10);
-    },
-    resetTimer: function() {
-      this.timeLeft = this.startTime;
     }
   },
   mounted: function() {
     this.startTimer();
   },
   destroyed: function() {
-    clearInterval(interval);
     this.timeLeft = 0;
   }
 };
@@ -64,6 +60,11 @@ export default {
   align-items: center;
 }
 
+.innerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 input {
   display: inline;
   border: none;
@@ -80,6 +81,7 @@ input:focus {
   height: 40px;
   border: 3px solid #2c3e50;
   border-radius: 5px;
+  margin-right: 40px;
 }
 
 .progress-bar-fill {
