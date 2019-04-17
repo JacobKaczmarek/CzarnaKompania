@@ -1,6 +1,7 @@
 <template>
   <div class="ultimateWrapper">
     <h1>ULTIMATE FRISBEE TO SPORT</h1>
+    <br>
     <p>
       Sport jest naszą pasją, receptą na balans między
       obowiązkami edukacyjnymi i zawodowymi, i dbaniem o
@@ -21,7 +22,7 @@
 
 <style lang="scss" scoped>
 .ultimateWrapper {
-  text-align: center;
+  text-align: left;
   color: white;
   margin-top: 40px;
   margin: 10px;

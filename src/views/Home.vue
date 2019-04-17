@@ -7,13 +7,13 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from "@/components/Navbar";
+import Navbar from '@/components/Navbar';
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    Navbar
-  }
+    Navbar,
+  },
 };
 </script>
 
@@ -32,4 +32,3 @@ export default {
   background-attachment: fixed;
 }
 </style>
-

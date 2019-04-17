@@ -1,6 +1,7 @@
 <template>
   <div class="ckWrapper">
     <h1>Czarna Kompania</h1>
+    <br>
     <p>
       Czarna Kompania to klub sportowy, paczka przyjaciół,
       mieszkańcy Poznania i okolic. Drużyna powstała w
@@ -20,7 +21,7 @@
 
 <style lang="scss" scoped>
 .ckWrapper {
-  text-align: center;
+  text-align: left;
   color: white;
   margin-top: 40px;
   margin: 10px;

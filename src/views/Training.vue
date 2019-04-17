@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import Timer from "@/components/Timer";
+import Timer from '@/components/Timer';
 
 export default {
   components: { Timer },
   data() {
     return {
       drillNumber: null,
-      drillPath: ""
+      drillPath: '',
     };
   },
   methods: {
@@ -30,15 +30,15 @@ export default {
         newDrill = Math.ceil(Math.random() * 5);
       }
       this.drillNumber = newDrill;
-      this.drillPath = require("../assets/drills/drill" +
-        this.drillNumber +
-        ".png");
+      this.drillPath = require(`../assets/drills/drill${
+        this.drillNumber
+      }.png`);
       this.$refs.timer.resetTimer();
-    }
+    },
   },
-  mounted: function() {
+  mounted() {
     this.newDrill();
-  }
+  },
 };
 </script>
 

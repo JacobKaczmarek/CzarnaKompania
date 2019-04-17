@@ -1,6 +1,7 @@
 <template>
   <div class="peopleWrapper">
     <h1>Ludzie</h1>
+    <br>
     <p>
       Nasze motto to „jeden za wszystkich, wszyscy za
       jednego”. Pochodzimy z różnych ścieżek życia, natomiast
@@ -19,7 +20,7 @@
 
 <style lang="scss" scoped>
 .peopleWrapper {
-  text-align: center;
+  text-align: left;
   color: white;
   margin-top: 40px;
   margin: 10px;

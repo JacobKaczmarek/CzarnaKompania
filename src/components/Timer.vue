@@ -7,23 +7,23 @@
 </template>
 
 <script>
-import { stat } from "fs";
-import { setInterval, clearInterval } from "timers";
+import { stat } from 'fs';
+import { setInterval, clearInterval } from 'timers';
 
 let interval;
 
 export default {
-  name: "Timer",
+  name: 'Timer',
   data() {
     return {
       started: false,
       paused: false,
       startTime: 20,
-      timeLeft: null
+      timeLeft: null,
     };
   },
   methods: {
-    startTimer: function() {
+    startTimer() {
       this.started = true;
       this.timeLeft = this.startTime;
       let progress = 0;
@@ -31,25 +31,25 @@ export default {
         if (!this.paused) {
           this.timeLeft -= 0.01;
           progress = ((this.startTime - this.timeLeft) / this.startTime) * 100;
-          $(".progress-bar-fill").css("width", progress + "%");
+          $('.progress-bar-fill').css('width', `${progress}%`);
           if (this.timeLeft <= 0) {
             this.timeLeft = this.startTime;
-            this.$emit("stop");
+            this.$emit('stop');
           }
         }
       }, 10);
     },
-    resetTimer: function() {
+    resetTimer() {
       this.timeLeft = this.startTime;
-    }
+    },
   },
-  mounted: function() {
+  mounted() {
     this.startTimer();
   },
-  destroyed: function() {
+  destroyed() {
     clearInterval(interval);
     this.timeLeft = 0;
-  }
+  },
 };
 </script>
 
@@ -91,4 +91,3 @@ input:focus {
   border-radius: 1px;
 }
 </style>
-

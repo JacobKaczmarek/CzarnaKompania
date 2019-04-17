@@ -1,6 +1,7 @@
 <template>
   <div class="contactWrapper">
     <h1>Znajdziesz nas tutaj</h1>
+    <br>
     <div class="iconsContainer">
       <a
         href="https://www.facebook.com/czarnakompania.ultimate/?__tn__=%2Cd%2CP-R&eid=ARASu9gcMIEC7I8X4yEND8WdYpE0xTAdp9dHIYgqpBvtEAsgd41qycY3OKvWEHbzthc7PrY6PjoBbGS0"
@@ -10,6 +11,10 @@
       <a href="https://www.instagram.com/czarnakompania/">
         <i class="fab fa-instagram"></i>
       </a>
+    </div>
+    <div class="mail">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <p>czarna.kompania.poznan@gmail.com</p>
     </div>
   </div>
 </template>
@@ -41,6 +46,23 @@
 
   i {
     font-size: 3em;
+    transition: 0.3s;
+  }
+
+  i:hover {
+    color: rgb(145, 11, 11);
+  }
+}
+
+.mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 400;
+
+  i {
+    margin-right: 10px;
   }
 }
 </style>
