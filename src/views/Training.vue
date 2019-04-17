@@ -24,7 +24,7 @@ export default {
   },
   created() {
     this.drillNumber = Math.ceil(Math.random() * 3);
-    this.drillPath = require("../assets/drills/drill_" +
+    this.drillPath = require("../assets/drills/drill" +
       this.drillNumber +
       ".png");
   }
