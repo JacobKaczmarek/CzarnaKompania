@@ -59,6 +59,16 @@ export default {
             require("../assets/drills/drill5.png")
           ],
           id: 4
+        },
+        {
+          name: "Drill5",
+          src: [require("../assets/drills/drill6.png")],
+          id: 5
+        },
+        {
+          name: "Drill6",
+          src: [require("../assets/drills/drill7.png")],
+          id: 6
         }
       ],
       drillNumber: null,
@@ -74,7 +84,7 @@ export default {
       // Generate new drill number diffrent than the previous one
       let newDrill = this.drillNumber;
       while (newDrill == this.drillNumber || newDrill == null) {
-        newDrill = Math.ceil(Math.random() * 4) - 1;
+        newDrill = Math.ceil(Math.random() * this.drills.length) - 1;
       }
       this.drillNumber = newDrill;
 
