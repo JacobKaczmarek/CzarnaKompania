@@ -5,11 +5,13 @@
       <h1>Frisbee na Juwenaliach!</h1>
     </div>
     <div class="content">
-      Przez cały czas trwania Juwenaliów zapraszamy do strefy animacji, gdzie będziemy zarażać Was naszą zajawką do frisbee! Powiemy Wam o rzutach i chwytach. Opowiemy historie z Mistrzostw Europy i Świata. Pokażemy Wam freestyle i discgolf. Czekamy na Was przy flagach Ultimate Frisbee!
-      Poznań jest kolebką polskiego Ultimate. To właśnie tu, ponad 20 lat temu, na Cytadeli odbył się pierwszy mecz frisbee. Obecnie w mieście istnieją już 3 drużyny i my, Czarna Kompania, zachęcamy wszystkich do spróbowania swoich sił w trakcie Juwenaliów – a potem zapraszamy na treningi!
-      Specjalnie dla Was uruchamiamy treningi:
-      - w poniedziałki, na polanie przy Dzwonie Pokoju o godz. 18:00 - w środy, na polanie przy Dzwonie Pokoju o godz. 18:00
-      Przyjdź, pokażemy Ci jak rzucać frisbee bez psów!
+      <p>
+        Przez cały czas trwania Juwenaliów zapraszamy do strefy animacji, gdzie będziemy zarażać Was naszą zajawką do frisbee! Powiemy Wam o rzutach i chwytach. Opowiemy historie z Mistrzostw Europy i Świata. Pokażemy Wam freestyle i discgolf. Czekamy na Was przy flagach Ultimate Frisbee!
+        Poznań jest kolebką polskiego Ultimate. To właśnie tu, ponad 20 lat temu, na Cytadeli odbył się pierwszy mecz frisbee. Obecnie w mieście istnieją już 3 drużyny i my, Czarna Kompania, zachęcamy wszystkich do spróbowania swoich sił w trakcie Juwenaliów – a potem zapraszamy na treningi!
+      </p>Specjalnie dla Was uruchamiamy treningi:
+      <p>- w poniedziałki, na polanie przy Dzwonie Pokoju o godz. 18:00</p>
+      <p>- w środy, na polanie przy Dzwonie Pokoju o godz. 18:00</p>
+      <p>Przyjdź, pokażemy Ci jak rzucać frisbee bez psów!</p>
     </div>
   </div>
 </template>
