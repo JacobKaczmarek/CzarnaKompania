@@ -22,15 +22,14 @@
 
 <style lang="scss" scoped>
 .ultimateWrapper {
+  display: block;
   text-align: left;
+  height: 90vh;
   color: white;
-  margin-top: 40px;
-  margin: 10px;
+  line-height: 25px;
 
   @media (min-width: 768px) {
-    position: relative;
-    top: 30%;
-    width: 70%;
+    padding: 18% 180px;
     margin: auto;
   }
 }

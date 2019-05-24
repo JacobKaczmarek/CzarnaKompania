@@ -12,10 +12,10 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
-    <div class="mail">
+    <a href="mailto:czarna.kompania.poznan@gmail.com" class="mail">
       <i class="fa fa-envelope" aria-hidden="true"></i>
       <p>czarna.kompania.poznan@gmail.com</p>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -55,6 +55,8 @@
 }
 
 .mail {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
