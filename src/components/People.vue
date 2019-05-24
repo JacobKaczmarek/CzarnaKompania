@@ -22,6 +22,7 @@
 .peopleWrapper {
   display: block;
   text-align: left;
+  padding: 30px 15px;
   height: 90vh;
   color: white;
   line-height: 25px;

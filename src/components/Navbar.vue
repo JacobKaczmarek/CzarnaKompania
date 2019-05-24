@@ -12,38 +12,40 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   data() {
     return {
+      folded: true,
       links: [
         {
           id: 0,
-          to: 'people',
-          text: 'Ludzie',
+          to: "people",
+          text: "Ludzie"
         },
         {
           id: 1,
-          to: 'ultimate',
-          text: 'Ultimate',
+          to: "ultimate",
+          text: "Ultimate"
         },
         {
           id: 2,
-          to: 'contact',
-          text: 'kontakt',
+          to: "contact",
+          text: "kontakt"
         },
         {
           id: 3,
-          to: 'training',
-          text: 'trenuj',
-        },
-      ],
+          to: "training",
+          text: "trenuj"
+        }
+      ]
     };
   },
   methods: {
     toggleMenu() {
-      $('#navigation').toggleClass('folded');
-    },
-  },
+      $("#navigation").toggleClass("folded");
+      this.folded = !this.folded;
+    }
+  }
 };
 </script>
 

@@ -57,6 +57,7 @@ html {
 .ckWrapper {
   display: block;
   text-align: left;
+  padding: 30px 15px;
   height: 90vh;
   color: white;
   line-height: 25px;
@@ -78,6 +79,11 @@ p {
   bottom: 30px;
   right: 30px;
   visibility: hidden;
+
+  @media (max-width: 765px) {
+    bottom: 10px;
+    right: 15px;
+  }
 }
 
 .arrow {

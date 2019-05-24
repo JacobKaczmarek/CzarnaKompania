@@ -23,14 +23,19 @@
 .contactWrapper {
   text-align: center;
   color: white;
-  margin-top: 40px;
-  margin: 10px;
+  margin: 30% 15px;
 
   @media (min-width: 768px) {
     position: relative;
     top: 30%;
     width: 70%;
     margin: auto;
+  }
+
+  h1 {
+    @media (max-width: 765px) {
+      font-size: 25px;
+    }
   }
 }
 
@@ -63,6 +68,9 @@
   font-size: 1.1em;
   font-weight: 400;
 
+  @media (max-width: 765px) {
+    font-size: 15px;
+  }
   i {
     margin-right: 10px;
   }

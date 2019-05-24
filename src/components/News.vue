@@ -30,16 +30,28 @@ export default {
 }
 
 .header {
-  font-weight: normal;
-  font-size: 1.7em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  h1 {
+    font-weight: normal;
+
+    font-size: 1.7em;
+    @media (max-width: 765px) {
+      font-size: 1.7em;
+    }
+  }
 }
 
 .logo {
   height: 275px;
   width: 275px;
   margin: -20px;
+
+  @media (max-width: 765px) {
+    height: 150px;
+    width: 150px;
+  }
 }
 </style>

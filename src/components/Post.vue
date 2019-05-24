@@ -23,13 +23,18 @@ export default {
 
 <style lang="scss" scoped>
 .postWrapper {
-  margin-top: 40px;
+  margin: 40px auto;
 }
 
 .header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 765px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   img {
     width: 200px;
@@ -42,11 +47,21 @@ export default {
     padding: 20px;
     margin-left: 20px;
     font-weight: normal;
+
+    @media (max-width: 7655px) {
+      border: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
   }
 }
 
 .content {
   margin-top: 50px;
   line-height: 25px;
+
+  @media (max-width: 765px) {
+    margin-top: 20px;
+  }
 }
 </style>
