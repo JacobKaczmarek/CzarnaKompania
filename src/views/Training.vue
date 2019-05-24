@@ -183,7 +183,7 @@ header {
   border: none;
   outline: none;
   cursor: pointer;
-  background: #2c3e50;
+  background: rgb(145, 11, 11);
   border-radius: 4px;
 }
 </style>
