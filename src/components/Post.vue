@@ -1,36 +1,42 @@
 <template>
   <div class="postWrapper">
     <div class="header">
-      <img src="../assets/juwe_logo.png" alt>
-      <h1>Frisbee na Juwenaliach!</h1>
+      <h1>{{title}}</h1>
+      <img :src="thumbnail" alt />
     </div>
-    <div class="content">
-      <p>
-        Przez cały czas trwania Juwenaliów zapraszamy do strefy animacji, gdzie będziemy zarażać Was naszą zajawką do frisbee! Powiemy Wam o rzutach i chwytach. Opowiemy historie z Mistrzostw Europy i Świata. Pokażemy Wam freestyle i discgolf. Czekamy na Was przy flagach Ultimate Frisbee!
-        Poznań jest kolebką polskiego Ultimate. To właśnie tu, ponad 20 lat temu, na Cytadeli odbył się pierwszy mecz frisbee. Obecnie w mieście istnieją już 3 drużyny i my, Czarna Kompania, zachęcamy wszystkich do spróbowania swoich sił w trakcie Juwenaliów – a potem zapraszamy na treningi!
-      </p>Specjalnie dla Was uruchamiamy treningi:
-      <p>- w poniedziałki, na polanie przy Dzwonie Pokoju o godz. 18:00</p>
-      <p>- w środy, na polanie przy Dzwonie Pokoju o godz. 18:00</p>
-      <p>Przyjdź, pokażemy Ci jak rzucać frisbee bez psów!</p>
-    </div>
+    <div class="content">{{content}}</div>
+    <div class="line"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Post"
+  name: "Post",
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
+  data() {
+    return {
+      title: this.post.Title,
+      content: this.post.Content,
+      thumbnail: this.post.Thumbnail ? this.post.Thumbnail.url : ""
+    };
+  }
 };
 </script>
 
 
 <style lang="scss" scoped>
 .postWrapper {
-  margin: 40px auto;
+  margin: 40px auto 100px auto;
 }
 
 .header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 
   @media (max-width: 765px) {
@@ -39,7 +45,8 @@ export default {
   }
 
   img {
-    width: 200px;
+    height: 150px;
+    max-width: 200px;
     object-fit: contain;
   }
 
@@ -65,5 +72,13 @@ export default {
   @media (max-width: 765px) {
     margin-top: 20px;
   }
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  border-radius: 1px;
+  margin: 50px 0px;
 }
 </style>

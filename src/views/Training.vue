@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Timer from "@/components/Timer";
+import Timer from '@/components/Timer';
 
 export default {
   components: { Timer },
@@ -38,42 +38,42 @@ export default {
     return {
       drills: [
         {
-          name: "Drill1",
-          src: [require("../assets/drills/drill1.png")],
-          id: 1
+          name: 'Drill1',
+          src: [require('../assets/drills/drill1.png')],
+          id: 1,
         },
         {
-          name: "Drill2",
-          src: [require("../assets/drills/drill2.png")],
-          id: 2
+          name: 'Drill2',
+          src: [require('../assets/drills/drill2.png')],
+          id: 2,
         },
         {
-          name: "Drill3",
-          src: [require("../assets/drills/drill3.png")],
-          id: 3
+          name: 'Drill3',
+          src: [require('../assets/drills/drill3.png')],
+          id: 3,
         },
         {
-          name: "Drill4",
+          name: 'Drill4',
           src: [
-            require("../assets/drills/drill4.png"),
-            require("../assets/drills/drill5.png")
+            require('../assets/drills/drill4.png'),
+            require('../assets/drills/drill5.png'),
           ],
-          id: 4
+          id: 4,
         },
         {
-          name: "Drill5",
-          src: [require("../assets/drills/drill6.png")],
-          id: 5
+          name: 'Drill5',
+          src: [require('../assets/drills/drill6.png')],
+          id: 5,
         },
         {
-          name: "Drill6",
-          src: [require("../assets/drills/drill7.png")],
-          id: 6
-        }
+          name: 'Drill6',
+          src: [require('../assets/drills/drill7.png')],
+          id: 6,
+        },
       ],
       drillNumber: null,
-      drillPath: "",
-      drillStage: 0
+      drillPath: '',
+      drillStage: 0,
     };
   },
   methods: {
@@ -115,11 +115,11 @@ export default {
     },
     updatePath() {
       this.drillPath = this.drills[this.drillNumber].src[this.drillStage];
-    }
+    },
   },
   mounted() {
     this.newDrill();
-  }
+  },
 };
 </script>
 

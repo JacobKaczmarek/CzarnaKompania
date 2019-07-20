@@ -2,19 +2,39 @@
   <div class="news-wrapper">
     <div class="header">
       <h1>Co nowego?</h1>
-      <img class="logo" src="../assets/logo.png" alt="logo">
+      <img class="logo" src="../assets/logo.png" alt="logo" />
     </div>
-    <Post/>
+    <Post v-for="post of posts" :key="post.id" :post="post" />
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 import Post from "@/components/Post";
+
+const API = "http://ec2-35-158-208-44.eu-central-1.compute.amazonaws.com:1337";
 
 export default {
   name: "News",
   components: {
     Post
+  },
+  data() {
+    return {
+      posts: []
+    };
+  },
+  methods: {
+    getPosts: function() {
+      axios.get(`${API}/posts`).then(response => {
+        this.posts = response.data.reverse();
+        console.log(this.posts);
+      });
+    }
+  },
+  mounted() {
+    this.getPosts();
   }
 };
 </script>

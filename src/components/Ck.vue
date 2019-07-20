@@ -37,7 +37,7 @@ export default {
 };
 
 window.onscroll = function() {
-  let pageOffset = document.documentElement.scrollTop;
+  const pageOffset = document.documentElement.scrollTop;
 
   if (pageOffset >= 100) {
     document.querySelector(".to-top").style.visibility = "visible";
@@ -46,7 +46,6 @@ window.onscroll = function() {
   }
 };
 </script>
-
 
 
 <style lang="scss" scoped>
