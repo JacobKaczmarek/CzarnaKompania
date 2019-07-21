@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 
-import Post from "@/components/Post";
+import Post from '@/components/Post';
 
-const API = "http://ec2-35-158-208-44.eu-central-1.compute.amazonaws.com:1337";
+const API = 'http://ec2-35-158-208-44.eu-central-1.compute.amazonaws.com:1337';
 
 export default {
-  name: "News",
+  name: 'News',
   components: {
-    Post
+    Post,
   },
   data() {
     return {
-      posts: []
+      posts: [],
     };
   },
   methods: {
@@ -31,18 +31,18 @@ export default {
         this.posts = response.data.reverse();
         console.log(this.posts);
       });
-    }
+    },
   },
   mounted() {
     this.getPosts();
-  }
+  },
 };
 </script>
 
 
 <style lang="scss" scoped>
 .news-wrapper {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 80%;
   height: 90vh;
   margin: 50px auto;
@@ -53,6 +53,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 150px;
 
   h1 {
     font-weight: normal;

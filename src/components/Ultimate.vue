@@ -1,7 +1,7 @@
 <template>
   <div class="ultimateWrapper">
     <h1>ULTIMATE FRISBEE TO SPORT</h1>
-    <br>
+    <br />
     <p>
       Sport jest naszą pasją, receptą na balans między
       obowiązkami edukacyjnymi i zawodowymi, i dbaniem o

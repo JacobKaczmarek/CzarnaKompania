@@ -1,7 +1,10 @@
 <template>
   <div class="postWrapper">
     <div class="header">
-      <h1>{{title}}</h1>
+      <div class="title">
+        <h1>{{title}}</h1>
+        <h2>{{date}}</h2>
+      </div>
       <img :src="thumbnail" alt />
     </div>
     <div class="content">{{content}}</div>
@@ -11,20 +14,21 @@
 
 <script>
 export default {
-  name: "Post",
+  name: 'Post',
   props: {
     post: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       title: this.post.Title,
       content: this.post.Content,
-      thumbnail: this.post.Thumbnail ? this.post.Thumbnail.url : ""
+      thumbnail: this.post.Thumbnail ? this.post.Thumbnail.url : '',
+      date: this.post.Date.split('T')[0],
     };
-  }
+  },
 };
 </script>
 
@@ -50,17 +54,25 @@ export default {
     object-fit: contain;
   }
 
-  h1 {
-    font-size: 1.6em;
-    border-left: 2px solid gray;
-    padding: 20px;
-    margin-left: 20px;
-    font-weight: normal;
+  .title {
+    h1 {
+      font-size: 1.6em;
+      border-left: 2px solid gray;
+      padding: 20px;
+      margin-left: 20px;
+      font-weight: normal;
 
-    @media (max-width: 7655px) {
-      border: none;
-      margin-left: 0;
-      padding-left: 0;
+      @media (max-width: 7655px) {
+        border: none;
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+
+    h2 {
+      opacity: 0.6;
+      font-size: 1em;
+      margin: 0;
     }
   }
 }
