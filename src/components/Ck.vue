@@ -28,21 +28,21 @@
 </template>
 
 <script>
-import News from "@/components/News";
+import News from '@/components/News';
 
 export default {
   components: {
-    News
-  }
+    News,
+  },
 };
 
-window.onscroll = function() {
+window.onscroll = function () {
   const pageOffset = document.documentElement.scrollTop;
 
   if (pageOffset >= 100) {
-    document.querySelector(".to-top").style.visibility = "visible";
+    document.querySelector('.to-top').style.visibility = 'visible';
   } else {
-    document.querySelector(".to-top").style.visibility = "hidden";
+    document.querySelector('.to-top').style.visibility = 'hidden';
   }
 };
 </script>

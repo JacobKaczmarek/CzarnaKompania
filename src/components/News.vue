@@ -13,7 +13,7 @@ import axios from 'axios';
 
 import Post from '@/components/Post';
 
-const API = 'http://ec2-35-158-208-44.eu-central-1.compute.amazonaws.com:1337';
+const API = 'http://ec2-54-93-249-27.eu-central-1.compute.amazonaws.com:1337';
 
 export default {
   name: 'News',
@@ -26,8 +26,8 @@ export default {
     };
   },
   methods: {
-    getPosts: function() {
-      axios.get(`${API}/posts`).then(response => {
+    getPosts() {
+      axios.get(`${API}/posts`).then((response) => {
         this.posts = response.data.reverse();
         console.log(this.posts);
       });
