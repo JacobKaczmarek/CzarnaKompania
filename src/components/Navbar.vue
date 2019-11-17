@@ -15,6 +15,7 @@ export default {
   name: 'Navbar',
   data() {
     return {
+      folded: true,
       links: [
         {
           id: 0,
@@ -42,6 +43,7 @@ export default {
   methods: {
     toggleMenu() {
       $('#navigation').toggleClass('folded');
+      this.folded = !this.folded;
     },
   },
 };
