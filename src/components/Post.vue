@@ -7,7 +7,7 @@
       </div>
       <img :src="thumbnail" alt />
     </div>
-    <div class="content">{{content}}</div>
+    <div class="content"><span v-html="content"></span></div>
     <div class="line"></div>
   </div>
 </template>
