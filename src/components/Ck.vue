@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="ckWrapper" id="#top">
+    <div class="ckWrapper" id="top">
       <h1>Czarna Kompania</h1>
       <br>
       <p>
@@ -16,12 +16,12 @@
         aktualnie Mistrzem III Ligi, dzięki czemu w kolejnym
         sezonie będziemy piąć się po szczeblach
       </p>
-      <a href="#news" class="arrow">
+      <a @click="scrollToNews()" class="arrow">
         <i class="fa fa-chevron-down"></i>
       </a>
     </div>
     <News id="news"/>
-    <a href="#top" class="to-top">
+    <a @click="scrollToTop()" class="to-top">
       <i class="fa fa-chevron-up"></i>
     </a>
   </div>
@@ -33,6 +33,14 @@ import News from '@/components/News';
 export default {
   components: {
     News,
+  },
+  methods: {
+    scrollToNews() {
+      document.getElementById('news').scrollIntoView({ behavior: 'smooth' });
+    },
+    scrollToTop() {
+      window.scrollTo({ behavior: 'smooth', top: 0 });
+    },
   },
 };
 
@@ -89,7 +97,7 @@ p {
   position: relative;
   font-size: 3em;
   color: rgb(145, 11, 11);
-  margin-top: 150px;
+  margin-top: 10%;
   left: 50%;
   animation: jump 3s infinite ease-in-out;
 }

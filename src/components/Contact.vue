@@ -21,9 +21,12 @@
 
 <style lang="scss" scoped>
 .contactWrapper {
+  display: block;
   text-align: center;
+  padding: 30px 15px;
+  height: 90vh;
   color: white;
-  margin: 30% 15px;
+  line-height: 25px;
 
   @media (min-width: 768px) {
     position: relative;
